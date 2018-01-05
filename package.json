@@ -1,0 +1,24 @@
+{
+  "name": "parkr-backend-node",
+  "version": "1.0.0",
+  "description": "Backend for Parkr using node, express, and postgis",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "postgis",
+    "parkr",
+    "parking",
+    "backend",
+    "api"
+  ],
+  "author": "Tassos Lambrou",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2"
+  }
+}
