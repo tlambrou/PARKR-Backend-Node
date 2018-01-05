@@ -3,10 +3,7 @@ require('dotenv').config()
 var express = require('express')
 var app = express()
 
-
-// MIDDLEWARES
-
-// ALLOW CORS
+// Allow CORS
 var allowCrossDomain = function(req, res, next) {
   res.header('Access-Control-Allow-Origin', "*")
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
@@ -14,18 +11,21 @@ var allowCrossDomain = function(req, res, next) {
   next();
 }
 
+// MIDDLEWARE
 app.use(express.static('public'))
 app.use(allowCrossDomain)
 
 // ROUTES
-
 app.get('/', (req, res, next) => {
+  res.json({message: "We're working!"})
+})
 
-  res.send("We're working!")
+app.get('/import', (req, res, next) => {
+
 })
 
 // SERVER
-var port = process.env.PORT || 8000;
+var port = process.env.PORT || 3000;
 app.listen(port, function () {
-  console.log('Parkr-Backend listening on port 8000!')
+  console.log('Parkr-Backend listening on port 3000!')
 });
