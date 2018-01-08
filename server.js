@@ -17,7 +17,14 @@ app.use(allowCrossDomain)
 
 // ROUTES
 app.get('/', (req, res, next) => {
-  res.json({message: "We're working!"})
+  var timedParking = require('./resources/data/TimedParkingData.json')
+  var sampleParking = require('./resources/data/SampleTimedParking.json')
+  res.json({
+    message: "We're working!",
+    hereIsTheSampleData: sampleParking,
+    hereIsTheFullDataSample: [timedParking.features[0], timedParking.features[1], timedParking.features[2]]
+  })
+  console.log("Data loaded successfully!")
 })
 
 app.get('/import', (req, res, next) => {
