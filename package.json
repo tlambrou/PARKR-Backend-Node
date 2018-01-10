@@ -20,6 +20,8 @@
   "dependencies": {
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
-    "sequelize": "^4.29.0"
+    "sequelize": "^4.29.0",
+    "waterline": "^0.13.1-9",
+    "waterline-postgresql": "^0.50.0"
   }
 }
